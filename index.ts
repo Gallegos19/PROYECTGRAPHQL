@@ -1,4 +1,4 @@
-import { ApolloServer } from "@apollo/server";
+ import { ApolloServer } from "@apollo/server";
 import { db } from "./src/config/db";
 import { startStandaloneServer } from "@apollo/server/standalone";
 import { typeDefs } from "./src/typeDefs/typeDefs";
@@ -11,6 +11,8 @@ db.connect()
   });
 
 console.log(typeDefs);
+console.log('****************************************');
+console.log(resolvers);
 const server = new ApolloServer({ typeDefs, resolvers });
 
 startStandaloneServer(server, {
