@@ -5,6 +5,7 @@ import { deletePhone } from "./phone/deletePhoneMutation"
 import { updatePhone } from "./phone/updatePhoneMutation"
 import { createUser } from "./user/createUserMutation"
 import { deleteUser} from "./user/deleteUserMutation"
+import { loginUser } from "./user/loginUserMutation"
 
 import { createWebhook } from './webhook/createWebhook';
 import { createEvent } from './webhook/createEvent';
@@ -18,6 +19,7 @@ export const Mutation = {
     updatePhone,
     createUser,
     deleteUser,
+    loginUser,
     createWebhook,
     createEvent,
     createWebhookEvent

@@ -3,16 +3,16 @@ import { User } from "../entities/user/user.entity";
 
 export const getUserByEmail = async (email: string): Promise<User> => {
   try {
-    const query = "select * from users where email = ?";
-    const result = await db.execute(query, [email]);
-    return result[0] as unknown as User;
+    const query = "select * from user where email = ?";
+    const result: any = await db.execute(query, [email]);
+    return result[0].length > 0 ? result[0][0] : null;
   } catch (err: any) {
     throw new Error(err);
   }
 };
 export const getUserById = async (id: number): Promise<User> => {
   try {
-    const query = "select * from users where email = ?";
+    const query = "select * from user where email = ?";
     const result = await db.execute(query, [id]);
     return result[0] as unknown as User;
   } catch (err: any) {

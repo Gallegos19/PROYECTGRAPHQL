@@ -1,0 +1,1 @@
+export const loginUser: String = `loginUser (email: String!, password: String!) : String `;

@@ -7,6 +7,7 @@ import { deleteUser } from "./user/deleteUser";
 import { createWebhook } from "./webhook/createWebhook";
 import { createEvent } from "./webhook/createEvent";
 import { createWebhookEvent } from "./webhook/createWebhookEvent";
+import  { loginUser } from "./user/loginUser";
 export const allMutations : string = `
 type Mutation {
     ${createPhone}
@@ -18,5 +19,6 @@ type Mutation {
     ${createWebhook}
     ${createEvent}
     ${createWebhookEvent}
+    ${loginUser}
 }
 `

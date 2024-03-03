@@ -10,7 +10,7 @@ export const notifyEvent = async (id: number) => {
             }
             const req = {
                 method: "POST",
-                hearders : { "Content-Type":"application/json"},
+                headers : { "Content-Type":"application/json"},
                 body: JSON.stringify(body)
             }
             
